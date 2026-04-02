@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    vector<int> V;
+    
+    int avg;
+    ifstream    file;
+    file.open("numbers.txt");
+    
+    while(true) {
+        int x;
+        
+        file >> x;
+        
+        if (file.fail()) {
+            break;
+        }
+        
+        V.push_back(x);
+    }
+    
+    cout << "# of values:" << V.size() << endl;
+    
+    int sum = 0;
+    for (int x : V) {
+        sum = sum + x;
+    }    
+        cout << "The sum is:" << sum << endl;
+    
+    double mean = static_cast<double>(sum) / V.size();
+    
+    cout << "The mean is:" << mean << endl;
+    
+    for (int x : V) {
+        cout << x << endl;
+    }
+    
+    return 0;
+}
