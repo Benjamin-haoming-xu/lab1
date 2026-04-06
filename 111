@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <cmath>
 
 using namespace std;
 
@@ -41,11 +42,13 @@ int main()
         K.push_back(k);
     }
 
-    int diff = 0;
+    double diff = 0;
     for (double y : K) { 
         diff = diff + pow(y,2);
-        double standard_deviation = sqrt(diff / V.size());
     }
+
+    double standard_deviation = sqrt(diff / V.size());
+
     cout << "The standard deviation is:" << standard_deviation << endl;
             
     }
