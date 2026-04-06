@@ -8,8 +8,6 @@ using namespace std;
 int main()
 {
     vector<int> V;
-    
-    int avg;
     ifstream    file;
     file.open("numbers.txt");
     
@@ -36,6 +34,18 @@ int main()
     double mean = static_cast<double>(sum) / V.size();
     
     cout << "The mean is:" << mean << endl;
+
+    for (int x : V) {
+        k = x - mean;
+        K.push_back(k);
+
+        int dev = 0;
+        for (int y : K) { 
+            dev = dev + pow(y,2);
+            standard_deviation = dev / V.size();
+        cout << "The standard deviation is:" << standard_deviation << endl;
+            
+    }
     
     return 0;
 }
