@@ -50,8 +50,6 @@ int main()
     double standard_deviation = sqrt(diff / V.size());
 
     cout << "The standard deviation is:" << standard_deviation << endl;
-            
-    }
     
     return 0;
 }
