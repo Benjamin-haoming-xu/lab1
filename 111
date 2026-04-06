@@ -36,6 +36,16 @@ int main()
     
     cout << "The mean is:" << mean << endl;
 
+    sort(v.begin(), v.end());
+    double median;
+    if V.size % 2 == 0 {
+    median = (V[V.size() / 2 + 1] + V[V.size() / 2]) / 2;
+    } 
+    else {
+    median = V[V.size() // 2 + 1];
+    }
+    cout << "median: " << median << endl;
+
     vector<double> K;
     for (int x : V) {
         double k = x - mean;
