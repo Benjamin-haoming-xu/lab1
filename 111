@@ -37,9 +37,5 @@ int main()
     
     cout << "The mean is:" << mean << endl;
     
-    for (int x : V) {
-        cout << x << endl;
-    }
-    
     return 0;
 }
